@@ -37,5 +37,6 @@ sqlparse==0.4.4
 sympy==1.12
 tifffile==2023.9.18
 tqdm==4.66.1
+typing_extensions==4.8.0
 urllib3==2.0.5
 whitenoise==6.5.0
