@@ -11,9 +11,10 @@ import cv2
 import numpy as np
 import base64
 import io
+from rest_framework.decorators import api_view
 
 
-@csrf_exempt
+@api_view(['POST'])
 def similarity(request):
     if request.method == 'POST':
         try:
@@ -68,7 +69,7 @@ def compare_images(image1, image2):
 
 
 
-@csrf_exempt
+@api_view(['POST'])
 def sockColor(request):
     if request.method == 'POST':
         try:
