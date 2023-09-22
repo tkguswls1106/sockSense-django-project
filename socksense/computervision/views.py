@@ -114,22 +114,20 @@ def get_hsv_value(image):
     return average_hue, average_saturation, average_value
 
 def check_color(h, s, v):
-    if h > 125 and s > 180 and v > 130:
-        return "빨강"
-    elif h < 20 and s > 180 and v > 180:
-        return "주황"
-    elif h >= 20 and h < 30 and s > 160 and s < 200 and v >195:
-        return "노랑"
-    elif h > 65 and h < 95 and s > 130 and s < 205 and v > 110:
-        return "초록"
-    elif h > 105 and h < 130 and s > 160 and s < 220 and v > 50:
-        return "파랑"
-    elif h > 120 and h < 190 and s > 75 and s < 190 and v > 60 and v < 145:
-        return "보라"
-    elif s < 90 and v > 141:
+    if s < 42 and v > 115:
         return "흰색"
-    elif h > 80 and h < 120 and s < 40 and v > 100 and v <205:
-        return "회색"
+    elif h > 125 and s > 180 and v > 130:
+        return "빨강"
+    elif h < 20:
+        return "주황"
+    elif h >= 20 and h < 40:
+        return "노랑"
+    elif h > 65 and h < 98:
+        return "초록"
+    elif h > 98 and h < 120:
+        return "파랑"
+    elif h > 120:
+        return "보라"
     elif s < 50 and v < 50:
         return "검정"
     else:
